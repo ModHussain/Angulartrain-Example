@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="tab-content">
+		<div id="menu1" class="tab-pane fade in active">
+			<table
+				class="table table-responsive-md table-striped approve_table notification-head"
+				border="0">
+				<thead>
+					<tr>
+						<th>Image ID</th>
+						<th>User ID</th>
+						<th>Description</th>
+						<th>Date(dd/mm/yyyy)</th>
+						<th>Status</th>
+						<!-- <th>View More</th> -->
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in details"
+						ng-style="{'background-color': ((x.status == 'approved') ? '#dff0d8' : (x.status == 'rejected') ? '#f2dede' : (x.status == 'payments') ? '#d9edf7' : '') }">
+						<div>
+							<td>{{x.Imageid}}</td>
+							<td>{{x.userid}}</td>
+							<td>{{x.description}}</td>
+							<td>{{x.posted}}</td>
+							<td>{{x.status}}</td>
+							<!-- <td><a href="#">{{x.viewMore}}</a></td> -->
+						</div>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

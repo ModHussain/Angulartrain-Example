@@ -1,0 +1,68 @@
+<div class="view">
+<div class="container backgnd">	
+	<div class="positn">
+	<div class="profile-name"> 
+		 	       	 <button class="edit1 btn btn-info" ui-sref="header.userProfile({getid: getid1})" >Edit</button>	
+		 	       	 <h2 class="text-center"> {{userD.firstName}} {{userD.lastName}}</h2>
+
+	</div>
+			    <div class="absolute1">
+				<div class="profile" title="Size should be 3.5cm X 4.5cm">		
+							<img ng-src="{{filepreview}}" class="mg-thumbnail img-responsive profilepic">
+							
+				</div>
+				</div>
+		<div class="col-md-10 col-md-offset-4">		
+				<!-- User Profile -->
+				<form class="form-horizontal Ftop" name="myForm" novalidate>
+    				  <div class="form-group">
+						<label class="control-label col-sm-2" for="Name">FirstName :<span class="mandatory">*</span> </label>{{userD.firstName}} {{userD.lastName}}
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="MobileNum">Mobile Num : <span class="mandatory">*</span></label>{{userD.mobileNum}}
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Email">Email : <span class="mandatory">*</span></label>{{userD.name}}
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="DOB">Date Of Birth :<span class="mandatory">*</span></label>{{userD.dob}}
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Address">Address : <span class="mandatory">*</span></label>{{userD.address}}
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="State">State : <span class="mandatory">*</span></label>{{userD.state}}
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="City">City : <span class="mandatory">*</span></label>{{userD.city}}
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Zipcode">Zipcode : <span class="mandatory">*</span></label>{{userD.zipCode}}
+					</div>
+					<h3>Bank Details</h3>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Aadhar">Aadhar : <span class="mandatory">*</span></label>{{userD.aadharNo}}
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="AccountType">Account Type : <span class="mandatory">*</span></label>{{userD.accountType}}
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="IFSCCode">IFSC Code : <span class="mandatory">*</span></label>{{userD.ifscCode}}
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="BranchName">Branch Name : <span class="mandatory">*</span></label>{{userD.branchName}}
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="AccountNumber">Account Number : <span class="mandatory">*</span></label>{{userD.accountNo}}
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="BankName">Bank Name : <span class="mandatory">*</span></label>{{userD.bankName}}
+					</div>
+				</form>
+
+	
+</div>
+
+
+</div>
+</div>

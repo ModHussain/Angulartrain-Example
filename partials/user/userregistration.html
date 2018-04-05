@@ -1,0 +1,37 @@
+<div class="container">
+	
+  <div class="tab-content">
+  
+    <div id="menu1" class="tab-pane fade in active">
+		<table class="table table-responsive-md table-hover approve_table notification-head" border="0">
+			<thead style="color:white">
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Mobile Number</th>
+					<th>UserName</th>
+					<!-- <th>Password</th> -->
+					<!-- <th>View More</th> -->
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in details">
+			    <div>
+					<td>{{user.firstName}}</td>
+					<td>{{user.lastName}}</td>
+					<td>{{user.mobileNum}} </td>
+					<td>{{user.name}}</td>
+					<!-- <td>{{user.password}} </td> -->
+					<!-- <td><a href="#">{{x.viewMore}}</a></td> -->
+				</div>
+				</tr>
+			</tbody>
+		</table>
+    </div>
+    <!-- button for register -->
+    <div class = "pull-right">
+	<!-- <button type="button" class="btn btn-default"  data-toggle="modal" data-target="#myModal">Register</button> -->
+	<button ui-sref="header.RegNew" class="btn btn-primary pull-right">AddUser</span></button>
+	</div>
+</div>
+</div>	

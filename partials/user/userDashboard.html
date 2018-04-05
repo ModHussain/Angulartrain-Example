@@ -1,0 +1,47 @@
+<div class="container">
+	<ul class="col-md-4 photos" ng-repeat="x in vd">
+		<li>
+		<li>
+		<li><b> Img Id: </b>{{ x.id}}</li>
+
+		
+	</ul>
+</div>
+
+<div class="container">
+	<div class="tab-content">
+		<div id="menu1" class="tab-pane fade in active">
+			<table
+				class="table table-responsive-md table-striped approve_table notification-head"
+				border="0">
+				<thead>
+					<tr>
+						<th>Image ID</th>
+						<th>Vechile Number</th>
+						<th>Offence Category</th>
+						<th>Date(dd/mm/yyyy)</th>
+						<th>Description</th>
+						<th>Image</th>
+						<th>Status</th>
+						<!-- <th>View More</th> -->
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in datails">
+						<div>
+							<td>{{x.report_id}}</td>
+							<td>{{x.vehicleNum}}</td>
+							<td>{{x.offenceCategory}}</td>
+							<td>{{x.postedDate}}</td>
+							<td>{{x.description}}</td>
+							<td><button type="button" ui-sref="header.imgView({userId:x.report_id})" class="btn btn-primary">View</button></td>
+							<td>{{x.status}}</td>
+							<!-- <td><a href="#">{{x.viewMore}}</a></td> -->
+						</div>
+					</tr>
+				</tbody>
+			</table>
+			<button class="btn btn-primary pull-right" ui-sref="header.Report">Post Issue</button>
+		</div>
+	</div>
+</div>

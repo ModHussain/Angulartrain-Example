@@ -1,0 +1,126 @@
+
+<!--User Report Body-->
+<div class="container-fluid dashbord-background">
+	<div class="container">
+		<div class="dashboard-main">
+			<div class="row">
+				<div class="col-md-7 col-md-offset-4">
+					<img src="images/open-camera.png" />
+				</div>
+				<div class="col-md-8 col-md-offset-4">
+					<button type="button" class="btn btn-primary btn-sm">
+						<span class="glyphicon glyphicon-camera"></span> Open Camera
+					</button>
+
+					<!-- 	<button type="button" class="btn btn-primary btn-sm">Upload Photo
+          					<span class="glyphicon glyphicon-camera"></span>
+           				</button> -->
+				</div>
+
+				<form name="myForm" class="form-horizontal" id="form1" novalidate>
+					<div class="col-md-6 dashboard-margin-t">
+
+						<div class="form-group">
+							<label class="control-label col-sm-4">Vehicle No:</label>
+							<div class="col-sm-8 editRinputs">
+								<input type="text" name="RegisterNo" class="form-control"
+									placeholder="Ex..AP 05 BH 9018"
+									ng-model="ReportData.vehicleNum"
+									ng-pattern="/^([A-Z|a-z]{2}\s{1}\d{2}\s{1}[A-Z|a-z]{1,2}\s{1}\d{1,4})?([A-Z|a-z]{3}\s{1}\d{1,4})?$/"
+									required> <span
+									ng-show="myForm.RegisterNo.$invalid && myForm.RegisterNo.$touched ||myForm.RegisterNo.$invalid && myForm.RegisterNo.$dirty"
+									style="color: red;"> <span
+									ng-show="myForm.RegisterNo.$error.required">Vehicle No
+										is required </span>
+								</span> <span ng-show="myForm.RegisterNo.$error.pattern"
+									style="color: red;">Enter correct vehicle no.</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-4">Offence Category:</label>
+							<div class="col-sm-8 editRinputs">
+								<select class="form-control"
+									ng-options="Offence for Offence in offencelist"
+									ng-model="ReportData.offenceCategory" name="offence" required>
+									<option value="" disabled="true">Select Category</option>
+								</select> <span
+									ng-show="myForm.offence.$invalid && myForm.offence.$touched"
+									style="color: red;">Offence Category is required</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-4">Vehicle type:</label>
+							<div class="col-sm-8 editRinputs">
+								<select class="form-control" ng-model="ReportData.vechicleType"
+									ng-options="vehicletpye for vehicletpye in typeofvehicle"
+									name="vehicletype" required>
+									<option value="" disabled="true">Select vehicle</option>
+								</select> <span
+									ng-show="myForm.vehicletype.$invalid && myForm.vehicletype.$touched"
+									style="color: red;">Vehicle type is required</span>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label col-sm-4">Location:</label>
+							<div class="col-sm-8 editRinputs">
+								<input type="text" class="form-control"
+									ng-model="ReportData.location" placeholder="Location"
+									name="location" required> <span
+									ng-show="myForm.location.$invalid && myForm.location.$touched"
+									style="color: red;">Location is required</span>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label col-sm-4">Description:</label>
+							<div class="col-sm-8 editRinputs">
+								<input type="text" class="form-control"
+									ng-model="ReportData.description" placeholder="Description"
+									name="description" required> <span
+									ng-show="myForm.description.$invalid && myForm.description.$touched"
+									style="color: red;">Description is required</span>
+							</div>
+						</div>
+					</div>
+
+				</form>
+				<div class="col-md-4 dashboard-margin-t">
+					<!--  <div ng-controller="imageuploadingCtrl">
+			                    
+				                  		  <div class="col-md-6" >
+	                  						 <input type="file" name="file-upload-field" id="uploadedimage" class="file-upload-field"  file ng-model="ReportData.imgData" ng-model-instant onchange="angular.element(this).scope().imageUploadFunc(event)" multiple="true" >
+	             						  </div>
+	              						 <div class="col-md-6" >
+	               							   <img src="" id="controller" height="200" alt="Image preview...">
+	             						  </div> -->
+
+					<div ng-controller="imageuploadingCtrl">
+
+						<div ng-repeat="step in stepsModel">
+							<img class="thumb" ng-src="{{step}}" />
+						</div>
+
+						<input type='file' ng-model="ReportData.userImges.imgData"
+							onchange="angular.element(this).scope().imageUpload(event)"
+							multiple />
+
+					</div>
+
+
+
+					<!-- 			                    <div class="profile" title="Size should be 3.5cm X 4.5cm">
+						             <img ng-src="{{filepreview}}" class="img-responsive profilepic" ng-show="filepreview"/>
+				                    </div> -->
+					<!-- <input type="file" class="browse" fileinput="file" filepreview="filepreview"/> -->
+				</div>
+			</div>
+		</div>
+		<div class="from-control">
+			<button type="button" class="btn btn-primary col-md-offset-5"
+				ng-disabled="myForm.$invalid" ng-click="postrprt()">Submit</button>
+			<button class="btn btn-primary" ui-sref='header.Dashboard'>Back</button>
+		</div>
+	</div>
+</div>
+</div>

@@ -1,0 +1,101 @@
+.view{
+	padding-bottom:30px; 
+}
+.backgnd{
+	/* padding: 10px;*/
+    box-shadow: 2px 2px 2px 2px  #888888;
+    padding-left: 0px !important;
+	padding-right: 0px !important;
+	padding-bottom: 5px;
+}
+.positn{
+		position: relative; 
+}
+.mandatory{
+	color: red;
+}
+.edithead{
+	background-color: #337ab7;
+	margin-bottom: 5px;
+	color: #fff;
+	border-radius: 5px;
+}
+.allfields{
+	margin: 15px 0 25px 0;
+}
+.radiobtn1{
+	margin-bottom: 15px;
+}
+input[type=radio]{
+	margin-right: 5px;
+}
+.bankdetails{
+	margin-top: 10px;
+}
+.profilepic{
+
+	width: 170px;
+    height: 150px;
+/*    margin: 0 0 15px;
+    border-radius: 5px;*/
+    
+}
+.profile{
+
+	width: 170px;
+    height:150px;
+/*    margin: 0 0 15px;
+    border: 1px solid;
+    border-radius: 5px;*/
+}
+.profile1{
+	width: 170px;
+    height:150px;
+	border: 1px solid;
+}
+.fullform{
+	border: 2px solid;
+	padding: 15px 0 15px 0;
+	border-radius: 5px;
+}
+.savedetails{
+	margin-top: 10px;
+}
+.opa:{
+    opacity: 0.1;
+    filter: alpha(opacity=50);
+}
+.error-text{
+	color: red;
+}
+.border td{
+	border:0px;
+}
+.edit1{
+	float: right;
+}
+.profile-name{
+	background-color: #3B5998;
+	padding: 1px 0px 1px 0px;
+
+}
+.profile-name h2{
+	color: whitesmoke;
+}
+.absolute1{
+	position: absolute;
+	top: 30px;
+   left: 90px;
+}
+.edit{
+	padding-bottom:30px; 
+}
+.editFinputs{
+	height: 40px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.Ftop{
+	margin-top: 15px;
+}

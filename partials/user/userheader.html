@@ -1,0 +1,36 @@
+<div class="botton">
+   <nav class="navbar navbar-default navbar-fixed-top blue">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Traffic Application</a>
+      
+    </div>
+<div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right" align="center" >
+      	<!-- <li><a ui-sref=".Registration"><i class="glyphicon glyphicon-log-in"></i> Registration</a></li> -->
+      	<li><a ui-sref=".Dashboard"><span class="glyphicon glyphicon-home"> Dashboard</a></li>
+        <!-- <li><a ui-sref=".Report"><i class="glyphicon glyphicon-camera"></i> Report Issue</a></li> -->
+        <!-- <li><a ui-sref=".userStatic">Profile</a></li> -->
+        <!-- <li><a ui-sref=".Notification"><i class="glyphicon glyphicon-bell"></i> Notification</a></li> -->
+      	<li class="dropdown">
+    	<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> {{user.name}}
+    	<span class="caret"></span></button>
+    	<ul class="dropdown-menu">
+    	  	 <li><a ui-sref=".userStatic({getid: getid1})"><i class="glyphicon glyphicon-edit"></i> Profile</a></li>
+     		 <li><button class="btn btn-link" ng-click="logout()"><i class="glyphicon glyphicon-log-out" ></i> Logout</button></li>
+     		 
+    	</ul>
+  		</li>
+      
+      	
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+ <div ui-view></div>

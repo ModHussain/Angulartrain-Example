@@ -1,0 +1,206 @@
+<div class="view">
+<div class="container backgnd">	
+			<div class="positn">
+			<div class="profile-name"> 	
+		 	       	 <h2 class="text-center">Profile</h2>
+
+			</div>
+			    	<div class="absolute1">
+					<div class="profile" title="Size should be 3.5cm X 4.5cm">		
+							<img ng-src="{{filepreview}}" class="mg-thumbnail img-responsive profilepic">
+							
+							<input type="file" class="browse" fileinput="file" filepreview="filepreview"/>
+					</div>
+					</div>
+				</div>
+					 	       	 
+
+
+		<div class="col-md-10 col-md-offset-4">		
+				<!-- User Profile -->
+				<form class="form-horizontal Ftop" name="myForm" novalidate>
+     
+    				  <div class="form-group">
+						<label class="control-label col-sm-2" for="Name">FirstName :</label>
+							<div class="col-sm-4 editFinputs">
+								<input type="text" class="form-control" required name="fname" ng-model="userD.firstName" ng-pattern="/^[a-zA-Z](\D)+$/" placeholder="Enter First Name" />
+								
+								<span class="error-text" ng-show="myForm.fname.$invalid && myForm.fname.$touched || myForm.fname.$invalid && myForm.fname.$dirty">
+								<span ng-show="myForm.fname.$error.required">* FirstName is Required.</span>
+								<span ng-show="myForm.fname.$error.pattern">Hey! Only letters, buddy!</span></span> 
+							</div>
+							
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Name">LastName :</label>
+							<div class="col-sm-4 editFinputs">
+								<input type="text" class="form-control" required name="fname" ng-model="userD.lastName" ng-pattern="/^[a-zA-Z](\D)+$/" placeholder="Enter First Name" />
+								
+								<span class="error-text" ng-show="myForm.fname.$invalid && myForm.fname.$touched || myForm.fname.$invalid && myForm.fname.$dirty">
+								<span ng-show="myForm.fname.$error.required">* LastName is Required.</span>
+								<span ng-show="myForm.fname.$error.pattern">Hey! Only letters, buddy!</span></span> 
+						</div>	
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="MobileNum">Mobile Num :</label>
+							<div class="col-sm-4 editFinputs">
+								<input type="text" class="form-control" id="mobile" name="mobile" ng-model="userD.mobileNum"  ng-pattern="/^[6789]\d{9}$/"  placeholder="Provide Your Mobile Number"  required />
+				  				<span class="error-text" ng-show="myForm.mobile.$invalid && myForm.mobile.$touched||myForm.mobile.$invalid && myForm.mobile.$dirty">
+			    				<span class="error-text" ng-show="myForm.mobile.$error.required">* Mobile number is required</span>
+			  	  				</span>
+			  	 				 <span class="error-text" ng-show="myForm.mobile.$error.pattern">Hey! Enter a Valid Number, buddy!</span>
+							</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Email">Email :</label>
+							<div class="col-sm-4 editFinputs">
+								<input type="email" class="form-control" id="email" name="email"  ng-model="userD.name" ng-disable="true" ng-pattern="/[^@]+@[^@]+\.[a-zA-Z]{2,6}/" autocomplete="off" placeholder="Enter Email Id"  required>
+				      			<span class="error-text" ng-show="myForm.email.$invalid && myForm.email.$touched || myForm.email.$invalid && myForm.email.$dirty">
+					  				<span class="error-text" ng-show="myForm.email.$error.required">* Email I'd Is Mandatory.</span>
+					  				<span class="error-text" ng-show="myForm.email.$error.pattern">Hey! Provide Registered email id</span>
+					  			</span>
+							</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="DOB">Date Of Birth :</label>
+							<div class="col-sm-4 editFinputs">
+								<input type="date" class="form-control" name="dob" placeholder="mm/dd/yyyy" id="date" ng-model="userD.dob" autocomplete="off" required>
+								<span class="error-text" ng-show="myForm.dob.$invalid && myForm.dob.$touched || myForm.dob.$invalid && myForm.dob.$dirty">
+					  				<span class="error-text" ng-show="myForm.dob.$error.required">* DOB Is Mandatory.</span>
+					  				<span class="error-text" ng-show="myForm.dob.$error.pattern">Hey! Provide RDOB</span>
+					  			</span>
+							</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Address">Address :</label>
+							<div class="col-sm-4 editFinputs">
+								<input type="text" class="form-control" id="add"  name="add" autocomplete="off" ng-model="userD.address" placeholder="Address" required>
+								<span class="error-text" ng-show="myForm.add.$invalid && myForm.add.$touched || myForm.add.$invalid && myForm.add.$dirty">
+					  				<span class="error-text" ng-show="myForm.add.$error.required">* Address Is Mandatory.</span>
+					  				<span class="error-text" ng-show="myForm.add.$error.pattern">Hey! Provide Address</span>
+					  			</span>
+							</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="State">State :</label>
+							<div class="col-sm-4 editFinputs">
+								<input list="states" class="form-control" id="state" autocomplete="off"  name="state" ng-model="userD.state" placeholder="Enter Your State" required>
+			 
+										  <datalist id="states">
+										    <option value="Andaman and Nicobar Islands"></option>
+										    <option value="Andhra Pradesh"></option>
+										    <option value="Arunachal Pradesh"></option>
+										    <option value="Assam"></option>
+										    <option value="	Bihar"></option>
+										    <option value="Chandigarh"></option>
+										    <option value="Chhattisgarh"></option>
+										    <option value="Telangana"></option>
+										    <option value="Uttar Pradesh"></option>
+										    <option value="West Bengal"></option>
+										  </datalist>
+								   <span class="error-text" ng-show="myForm.state.$invalid && myForm.state.$touched || myForm.state.$invalid && myForm.state.$dirty">
+					  				<span class="error-text" ng-show="myForm.state.$error.required">* State Is Mandatory.</span>
+					  				<span class="error-text" ng-show="myForm.state.$error.pattern">Hey! Provide state</span>
+					  			</span>
+							</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="City">City :</label>
+							<div class="col-sm-4 editFinputs">
+								<input type="text" class="form-control" id="city"  name="city" autocomplete="off" ng-model="userD.city" placeholder="Enter Your City" required>
+
+								<span class="error-text" ng-show="myForm.city.$invalid && myForm.city.$touched || myForm.city.$invalid && myForm.city.$dirty">
+					  				<span class="error-text" ng-show="myForm.city.$error.required">* City Is Mandatory.</span>
+					  				<span class="error-text" ng-show="myForm.city.$error.pattern">Hey! Provide City</span>
+					  			</span>
+								    
+							</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Zipcode">Zipcode :</label>
+							<div class="col-sm-4 editFinputs">
+								<input type="text" class="form-control" name="zipcode" autocomplete="off" ng-model="userD.zipCode" placeholder="Enter Your Zipcode" required>
+			    					<span class="error-text" ng-show="myForm.zipcode.$invalid && myForm.zipcode.$touched || myForm.zipcode.$invalid && myForm.zipcode.$dirty">
+					  				<span class="error-text" ng-show="myForm.zipcode.$error.required">*Zipcode Is Mandatory.</span>
+					  				<span class="error-text" ng-show="myForm.zipcode.$error.pattern">Hey! Provide Zipcode</span>
+					  			</span>
+							</div>
+					</div>
+					<h3>Bank Details</h3>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Aadhar">Aadhar :</label>
+						<div class="col-sm-4 editFinputs">
+							<input type="text" class="form-control" name="Aadhar" ng-pattern="/[0-9]{12}/" ng-minlength="12" ng-maxlength="12" ng-model="userD.aadharNo" autocomplete="off" placeholder="Enter Your Aadhar Number"  required>
+									<span class="error-text" ng-show="myForm.Aadhar.$invalid && myForm.Aadhar.$touched || myForm.Aadhar.$invalid && myForm.Aadhar.$dirty">
+					  				<span class="error-text" ng-show="myForm.Aadhar.$error.required">* Aadhar Is Mandatory.</span>
+					  				<span class="error-text" ng-show="myForm.Aadhar.$error.pattern">Hey! Provide Aadhar</span>
+					  			</span>
+						</div>
+
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="AccountType">Account Type :</label>
+						<div class="col-sm-4 editFinputs">
+							<select class="form-control" name="Account" ng-model="userD.accountType" autocomplete="off" required >
+									      	<option disabled >Please choose account type</option>
+									        <option>Savings Account</option>
+									        <option>Current Account</option>
+									        <option>Checking Account</option>
+							</select>
+							<span class="error-text" ng-show="myForm.Account.$invalid && myForm.Account.$touched || myForm.Account.$invalid && myForm.Account.$dirty">
+					  				<span class="error-text" ng-show="myForm.Account.$error.required">* Account Details Is Mandatory.</span>					  				
+					  				<span class="error-text" ng-show="myForm.Account.$error.pattern">Hey! Provide Account Details </span>
+					  			</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="IFSCCode">IFSC Code :</label>
+						<div class="col-sm-4 editFinputs">
+								<input type="text" class="form-control" name="IFSC" autocomplete="off" ng-model="userD.ifscCode" id="ifsc" placeholder="IFSC code" required>
+							<span class="error-text" ng-show="myForm.IFSC.$invalid && myForm.IFSC.$touched || myForm.IFSC.$invalid && myForm.IFSC.$dirty">
+					  				<span class="error-text" ng-show="myForm.IFSC.$error.required">* IFSC Details Is Mandatory.</span>					  				
+					  				<span class="error-text" ng-show="myForm.IFSC.$error.pattern">Hey! Provide IFSC Details </span>
+					  			</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="BranchName">Branch Name :</label>
+						<div class="col-sm-4 editFinputs">
+								<input type="text" class="form-control" name="Branch" id="brname" autocomplete="off" ng-model="userD.branchName" placeholder="Enter your branch name" required>
+							<span class="error-text" ng-show="myForm.Branch.$invalid && myForm.Branch.$touched || myForm.Branch.$invalid && myForm.Branch.$dirty">
+					  				<span class="error-text" ng-show="myForm.Branch.$error.required">* Branch Details Is Mandatory.</span>					  				
+					  				<span class="error-text" ng-show="myForm.Branch.$error.pattern">Hey! Provide Branch Details </span>
+					  			</span>	
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="AccountNumber">Account Number :</label>
+						<div class="col-sm-4 editFinputs">
+								<input type="text" class="form-control" name="Anumber" id="account" autocomplete="off" ng-model="userD.accountNo" placeholder="Bank account number" required>
+							<span class="error-text" ng-show="myForm.Anumber.$invalid && myForm.Anumber.$touched || myForm.Anumber.$invalid && myForm.Anumber.$dirty">
+					  				<span class="error-text" ng-show="myForm.Anumber.$error.required">* Anumber Details Is Mandatory.</span>					  				
+					  				<span class="error-text" ng-show="myForm.Anumber.$error.pattern">Hey! Provide Anumber Details </span>
+					  			</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="BankName">Bank Name :</label>
+						<div class="col-sm-4 editFinputs">
+								<input type="text" class="form-control" name="BankName" id="bname" autocomplete="off" ng-model="userD.bankName" placeholder="Enter your bank name" required>
+							<span class="error-text" ng-show="myForm.BankName.$invalid && myForm.BankName.$touched || myForm.BankName.$invalid && myForm.zipcode.$dirty">
+					  				<span class="error-text" ng-show="myForm.BankName.$error.required">* BankName Details Is Mandatory.</span>					  				
+					  				<span class="error-text" ng-show="myForm.BankName.$error.pattern">Hey! Provide BankName Details </span>
+					  			</span>
+						</div>
+					</div>
+					<div class="btn-group col-md-offset-3">
+						<button class="btn btn-info" ui-sref='header.userStatic({getid: getid1})'>Back</button>
+						<button class="btn btn-info" ng-click="putData()" ui-sref='header.userStatic({getid: getid1})'>Update</button>
+					</div>
+				</form>
+
+	
+</div>
+</div>
+</div>

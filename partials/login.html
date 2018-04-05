@@ -1,0 +1,151 @@
+<div>
+<!--Header Content Start-->
+<div class="container-fluid index_img">
+	<div class="container">
+		<div class="row">
+		<!--Login Page starts-->
+			<div class="pull-right index_box index_box_opacity">
+				<h3 class="text-center">Login</h3>
+					<form class="form-horizontal" name="loginForm" novalidate ng-submit="login()">
+						<div class="form-group">
+							<label class="control-label col-sm-4" for="email">Email:</label>
+							<div class="col-sm-8">
+								<input id="username" ng-model="username" type="text" class="form-control" />
+							    <!-- <input type="text" placeholder="Email" class="form-control" ng-model="username" name="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required /> -->
+								<!-- <span ng-show="loginForm.email.$invalid && loginForm.email.$touched ||loginForm.email.$invalid && loginForm.email.$dirty" class="index_error">
+									<span ng-show="loginForm.email.$error.required">Email is required </span>
+								</span>
+								<span ng-show="loginForm.email.$error.pattern" class="index_error">Enter valid Email Id</span> -->
+							    <!-- <span class="index_error">{{eu}}</span> -->
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-4" for="password">Password:</label>
+							<div class="col-sm-8"> 
+								<input id="password" ng-model="password" type="password" class="form-control" />
+							   	<!-- <input type="password" placeholder="Password" class="form-control" ng-model="pwd" name="password" ng-pattern= "/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/" required >
+								<span ng-show="loginForm.password.$invalid && loginForm.password.$touched ||loginForm.password.$invalid && loginForm.password.$dirty" class="index_error">
+								    <span ng-show="loginForm.password.$error.required">Password is required </span>
+								</span>
+								 <span ng-show="loginForm.password.$error.pattern" class="index_error">Password length must be 8 chars</span>
+							   	<span class="index_error">{{ep}}</span> -->
+							</div>
+						</div>
+						<div class="form-group"> 
+							<div class="col-sm-offset-2 col-sm-10">
+							    <div class="checkbox">
+							        <label> <input type="checkbox" ng-model="rememberMe"> Remember me</label>
+							    </div>
+							</div>
+						</div>
+						<div class="form-group"> 
+							<div class="col-sm-offset-4 col-sm-10">
+								<button type="submit"  class="btn btn-default" ng-click="login()">Login</button>
+							  
+							</div>
+						</div>
+					</form>
+		<!--Login Page end-->
+					
+				</div>
+			</div>
+	</div>
+</div>
+<!-- about starts-->
+<div class="container-fluid index_intruction-bg">
+    <div class="container">
+    	<h2 class="text-center index_fontsize">About Traffic Instructions</h2>
+    	<div class="col-md-12 index_mar">
+    		<p class="index_font_size">
+    			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur enim vel hendrerit scelerisque. Donec et aliquam mauris. Sed sed pretium arcu, nec posuere erat. Quisque vestibulum, massa vitae ornare lobortis, velit lectus pellentesque eros, nec convallis eros ligula sit amet sapien. Vivamus sodales pretium nibh, ac euismod lorem mollis eu. Nunc ultrices volutpat semper. Proin at varius felis.
+    		</p>
+      	</div>
+      	<div class="row index_mar">
+		      	<div class="col-md-6">
+		      		<div class="index-instruction_box row">
+			      		<div class="col-md-4">
+			      			<img src="images/helmet.png" class="img-responsive">
+			      		</div>
+			      		<div class="col-md-8">
+			      			<h3 class="index_fontsize">Helmet</h3>
+				    		<p class="index_fontcolor">Wearing helmets can save your life and the lives of people travelling with you.</p>
+				    	</div>
+		      		</div>
+		      		<div class="index-instruction_box row">
+				    	<div class="col-md-4">
+			      			<img src="images/opposite_direction.png" class="img-responsive">
+			      		</div>
+			      		<div class="col-md-8">
+			      			<h3 class="index_fontsize">Opposite Direction</h3>
+				    		<p class="index_fontcolor">Stop driving in oppostite direction.</p>
+				    	</div>
+			    	</div>
+		      	</div>
+		      	<div class="col-md-6">
+			    	<div class="index-instruction_box row">
+				    	<div class="col-md-4">
+			      			<img src="images/triple_riding.png" class="img-responsive">
+			      		</div>
+			      		<div class="col-md-8">
+			      			<h3 class="index_fontsize">Triple Riding</h3>
+				    		<p class="index_fontcolor">It is very dangerous to you and the people who is travelling with you.</p>
+				    	</div>
+			    	</div>
+			    	<div class="index-instruction_box row">
+				    	<div class="col-md-4">
+			      			<img src="images/no_parking.png" class="img-responsive">
+			      		</div>
+			      		<div class="col-md-8">
+			      			<h3 class="index_fontsize">No Parking</h3>
+					    	<p class="index_fontcolor">Never park park your vechiles in no parking areas.</p>
+				    	</div>
+			    	</div>
+		      	</div>
+    		</div>
+    		<div class="row">
+		      	<div class="col-md-6">
+		      		<div class="index-instruction_box row">
+			      		<div class="col-md-4">
+			      			<img src="images/no_seatbelt.png" class="img-responsive">
+			      		</div>
+			      		<div class="col-md-8">
+				    		<h3 class="index_fontsize "> Use Seat Belt</h3>
+	    					<p class="index_fontcolor">Wearing seat belt can save your life and the lives of people travelling with you.</p>
+				    	</div>
+		      		</div>
+		      		<div class="index-instruction_box row">
+				    	<div class="col-md-4">
+			      			<img src="images/no_cellphone_driving.png" class="img-responsive">
+			      		</div>
+			      		<div class="col-md-8">
+				    		<h3 class="index_fontsize ">Phone Driving</h3>
+		    				<p class="index_fontcolor">Stop usage phone while driving.In case you need to operate the phone. Stop on the left side and then converse.</p>
+				    	</div>
+			    	</div>
+		      	</div>
+		      	<div class="col-md-6">
+			    	<div class="index-instruction_box row">
+				    	<div class="col-md-4">
+			      			<img src="images/no_U_turns.png" class="img-responsive">
+			      		</div>
+			      		<div class="col-md-8">
+			      			<h3 class="index_fontsize" >No U-turn</h3>
+		    				<p class="index_fontcolor">Taking “U” turn during forbidden hours.</p>
+				    	</div>
+			    	</div>
+			    	<div class="index-instruction_box row">
+				    	<div class="col-md-4">
+			      			<img src="images/icon_8.png" class="img-responsive">
+			      		</div>
+			      		<div class="col-md-8">
+			      			<h3 class="index_fontsize ">Hit and Run by Vehicle</h3>
+	    					<p class="index_fontcolor">Go slow and avoid accidents.</p>
+				    	</div>
+			    	</div>
+		      	</div>
+    		</div>
+  		</div>
+<!-- about ends-->
+<!--Header Content ends-->
+<!-- <script src="js/index_app.js"></script> -->
+</div>
